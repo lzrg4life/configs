@@ -20,6 +20,7 @@ Various configuration files and notes
 1. Download the zip file from [dart.dev](https://dart.dev/tools/sdk/archive)
 2. Extract the zip file to an appropriate location like ```C:\tools\dart-sdk\```.
 3. Add the ```bin``` folder to your path.
+4. Add the ```bin\snapshots``` folder to your path.
 
 ### Installing dotnet
 
