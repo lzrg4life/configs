@@ -30,6 +30,7 @@ set nobackup
 set cmdheight=2
 set nowrap
 set noerrorbells
+set foldmethod=syntax
 
 colorscheme gruvbox
 set background=dark
