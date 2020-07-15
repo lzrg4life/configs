@@ -31,11 +31,15 @@ set cmdheight=2
 set nowrap
 set noerrorbells
 
-colorscheme evening
+colorscheme gruvbox
+set background=dark
 
 " Easier copy/paste from system clipboard
 nmap <Leader>p "+p
 vmap <Leader>y "+y
+
+nmap <S-l> $
+nmap <S-h> 0
 
 " Correctly identify INI files for syntax highlighting
 autocmd BufRead,BufNewFile *.ini,*.INI set filetype=dosini
