@@ -33,9 +33,9 @@ set noerrorbells
 
 colorscheme evening
 
-# Easier copy/paste from system clipboard
+" Easier copy/paste from system clipboard
 nmap <Leader>p "+p
 vmap <Leader>y "+y
 
-# Correctly identify INI files for syntax highlighting
+" Correctly identify INI files for syntax highlighting
 autocmd BufRead,BufNewFile *.ini,*.INI set filetype=dosini
