@@ -48,7 +48,7 @@ vmap <Leader>y "+y
 nmap <S-l> $
 nmap <S-h> 0
 nmap <Leader>c zC
-nmap <Leader>z za
+nmap <Leader>f za
 nmap <Up> {
 nmap <Down> }
 nmap <S-Down> :<C-u>call search('^.\+')<CR>:<BS>
