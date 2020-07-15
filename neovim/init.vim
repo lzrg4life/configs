@@ -35,17 +35,27 @@ set foldmethod=syntax
 colorscheme gruvbox
 set background=dark
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Key Mappings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let mapleader = " "
+
 " Easier copy/paste from system clipboard
 nmap <Leader>p "+p
 vmap <Leader>y "+y
 
 nmap <S-l> $
 nmap <S-h> 0
-nmap <Left> za
+nmap z za
 nmap <Up> {
 nmap <Down> }
 nmap <S-Down> :<C-u>call search('^.\+')<CR>:<BS>
 nmap <S-Up> :<C-u>call search('^.\+', 'b')<CR>:<BS>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Autocmds
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Correctly identify INI files for syntax highlighting
 autocmd BufRead,BufNewFile *.ini,*.INI set filetype=dosini
