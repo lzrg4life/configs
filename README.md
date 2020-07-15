@@ -42,11 +42,11 @@ Get-Content .\powershell\profile.ps1 | Out-File $profile
 Open an admin powershell prompt in the root of this repository and run the following command:
 
 ```powershell
-New-Item -ItemType SymbolicLink -Path "$home\AppData\Local\nvim\init.vim" -Target ".\neovim\init.vim"
+New-Item -ItemType SymbolicLink -Path "$home\AppData\Local\nvim\init.vim" -Target "$pwd\neovim\init.vim"
 
-New-Item -ItemType SymbolicLink -Path "$home\AppData\Local\nvim\coc.vim" -Target ".\neovim\coc.vim"
+New-Item -ItemType SymbolicLink -Path "$home\AppData\Local\nvim\coc.vim" -Target "$pwd\neovim\coc.vim"
 
-New-Item -ItemType SymbolicLink -Path "$home\AppData\Local\nvim\coc-settings.json" -Target ".\neovim\coc-settings.json"
+New-Item -ItemType SymbolicLink -Path "$home\AppData\Local\nvim\coc-settings.json" -Target "$pwd\neovim\coc-settings.json"
 ```
 
 Prepare [vim plug](https://github.com/junegunn/vim-plug):
