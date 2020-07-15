@@ -20,7 +20,6 @@ Various configuration files and notes
 1. Download the zip file from [dart.dev](https://dart.dev/tools/sdk/archive)
 2. Extract the zip file to an appropriate location like ```C:\tools\dart-sdk\```.
 3. Add the ```bin``` folder to your path.
-4. Add the ```bin\snapshots``` folder to your path.
 
 ### Installing dotnet
 
@@ -48,6 +47,8 @@ New-Item -ItemType SymbolicLink -Path "$home\AppData\Local\nvim\coc.vim" -Target
 
 New-Item -ItemType SymbolicLink -Path "$home\AppData\Local\nvim\coc-settings.json" -Target "$pwd\neovim\coc-settings.json"
 ```
+
+If necessary, correct the paths to the language servers in the ```coc-settings.json``` file. These need to be absolute paths.
 
 Prepare [vim plug](https://github.com/junegunn/vim-plug):
 
