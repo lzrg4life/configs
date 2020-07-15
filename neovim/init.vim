@@ -54,6 +54,10 @@ nmap <Down> }
 nmap <S-Down> :<C-u>call search('^.\+')<CR>:<BS>
 nmap <S-Up> :<C-u>call search('^.\+', 'b')<CR>:<BS>
 
+" Splits
+nmap <Leader>h <C-w>h
+nmap <Leader>l <C-w>l
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Autocmds
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
