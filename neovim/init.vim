@@ -41,6 +41,11 @@ vmap <Leader>y "+y
 
 nmap <S-l> $
 nmap <S-h> 0
+nmap <Left> za
+nmap <Up> {
+nmap <Down> }
+nmap <S-Down> :<C-u>call search('^.\+')<CR>:<BS>
+nmap <S-Up> :<C-u>call search('^.\+', 'b')<CR>:<BS>
 
 " Correctly identify INI files for syntax highlighting
 autocmd BufRead,BufNewFile *.ini,*.INI set filetype=dosini
