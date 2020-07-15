@@ -3,7 +3,7 @@
     "dart": {
       "command": "dart",
       "args": [
-        "analysis_server.dart.snapshot",
+        "C:\\tools\\dart-sdk\\bin\\snapshots\\analysis_server.dart.snapshot",
         "--lsp",
         "--client-id",
         "vim",
