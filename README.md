@@ -62,15 +62,16 @@ md $home\AppData\Local\nvim-data\site\autoload
 )
 ```
 
-Open nvim and Confirm the config loaded correctly before continuing.
+Open nvim and confirm the config loaded correctly before continuing.
+* You will get a few errors related to the plugins not being installed yet. Just hit Enter to get by them for now.
 
-### Neovim: Install the plugins
-
-In nvim do:
+Now, in nvim do:
 
 ```
 :PlugInstall
 ```
+
+Close and reopen nvim.
 
 Then install all the language servers:
 
