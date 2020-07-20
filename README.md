@@ -32,6 +32,10 @@ Install the .NET Core SDK from [Microsoft](https://dotnet.microsoft.com/download
 
 Note that the powershell profile expects the executable to end up at "C:\Program Files\Notepad++\Notepad++.exe"
 
+### Installing Visual Studio Code
+
+Follow the instructions at [code.visualstudio.com](https://code.visualstudio.com/)
+
 ## Powershell Profile
 
 Note: You cannot symlink to the file due to stupid Powershell permissions about running scripts from other computers
@@ -87,4 +91,12 @@ Then install all the language servers:
 
 ```
 :CocInstall coc-json coc-tsserver coc-css coc-html coc-omnisharp coc-yaml
+```
+
+## Visual Studio Code Settings
+
+Open an admin powershell prompt in the root of this repository and run the following command:
+
+```powershell
+New-Item -ItemType SymbolicLink -Path "$home\AppData\Roaming\Code\User\settings.json" -Target "$pwd\vscode\settings.json"
 ```
