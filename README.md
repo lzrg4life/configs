@@ -45,6 +45,8 @@ New-Item -ItemType SymbolicLink -Path "$home\AppData\Local\nvim\init.vim" -Targe
 
 New-Item -ItemType SymbolicLink -Path "$home\AppData\Local\nvim\coc.vim" -Target "$pwd\neovim\coc.vim"
 
+New-Item -ItemType SymbolicLink -Path "$home\AppData\Local\nvim\lightline.vim" -Target "$pwd\neovim\lightline.vim"
+
 New-Item -ItemType SymbolicLink -Path "$home\AppData\Local\nvim\coc-settings.json" -Target "$pwd\neovim\coc-settings.json"
 ```
 

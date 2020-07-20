@@ -9,11 +9,16 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'dart-lang/dart-vim-plugin'
 
+Plug 'itchyny/lightline.vim'
+
+Plug 'liuchengxu/vista.vim'
+
 " Initialize plugin system
 call plug#end()
 
-" Load coc specific settings
+" Load plugin specific settings
 runtime coc.vim
+runtime lightline.vim
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Load my settings
@@ -31,6 +36,10 @@ set cmdheight=2
 set nowrap
 set noerrorbells
 set foldmethod=syntax
+set nofoldenable
+
+" The lightline plugin shows the mode
+set noshowmode
 
 colorscheme gruvbox
 set background=dark
@@ -53,6 +62,8 @@ nmap <Up> {
 nmap <Down> }
 nmap <S-Down> :<C-u>call search('^.\+')<CR>:<BS>
 nmap <S-Up> :<C-u>call search('^.\+', 'b')<CR>:<BS>
+nmap <Leader>diag :CocDiagnostic
+nmap <Leader>vista :Vista coc
 
 " Splits
 nmap <Leader>h <C-w>h
