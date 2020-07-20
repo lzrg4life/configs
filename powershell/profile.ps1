@@ -1,5 +1,3 @@
-clear
-
 # Turn off the error sound
 Set-PSReadLineOption -BellStyle None
 
@@ -12,6 +10,8 @@ function prompt {
 }
 
 New-Alias -name "v" "nvim.exe"
+New-Alias -name "vg" "nvim-qt.exe"
+New-Alias -name "npp" "C:\Programe Files\Notepad++\Notepad++.exe"
 New-Alias -name "touch" "New-Item"
 
 $nvprofiledir = "$home\AppData\Local\nvim"
