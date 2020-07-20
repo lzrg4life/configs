@@ -2,7 +2,7 @@
 
 Various configuration files and notes
 
-## Installing dependencies
+## Installing Dependencies
 
 ### Installing Powershell Core
 
@@ -15,17 +15,17 @@ Various configuration files and notes
 2. Extract the zip file to an appropriate location like ```C:\tools\neovim\```.
 3. Add the ```bin``` folder to your path.
 
-### Installing dart-sdk
+### Installing Dart-sdk
 
 1. Download the zip file from [dart.dev](https://dart.dev/tools/sdk/archive)
 2. Extract the zip file to an appropriate location like ```C:\tools\dart-sdk\```.
 3. Add the ```bin``` folder to your path.
 
-### Installing dotnet
+### Installing DotNet
 
 Install the .NET Core SDK from [Microsoft](https://dotnet.microsoft.com/download)
 
-### Installing notepad++
+### Installing Notepad++
 
 1. Download the 64bit msi installer from [the website](https://notepad-plus-plus.org/downloads/)
 2. Install it following whatever steps are appropriate
