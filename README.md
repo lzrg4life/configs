@@ -25,6 +25,13 @@ Various configuration files and notes
 
 Install the .NET Core SDK from [Microsoft](https://dotnet.microsoft.com/download)
 
+### Installing notepad++
+
+1. Download the 64bit msi installer from [the website](https://notepad-plus-plus.org/downloads/)
+2. Install it following whatever steps are appropriate
+
+Note that the powershell profile expects the executable to end up at "C:\Program Files\Notepad++\Notepad++.exe"
+
 ## Powershell Profile
 
 Note: You cannot symlink to the file due to stupid Powershell permissions about running scripts from other computers
