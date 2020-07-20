@@ -13,6 +13,9 @@ Plug 'itchyny/lightline.vim'
 
 Plug 'liuchengxu/vista.vim'
 
+Plug 'itchyny/vim-gitbranch'
+
+
 " Initialize plugin system
 call plug#end()
 
