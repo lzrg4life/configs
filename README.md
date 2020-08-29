@@ -38,8 +38,4 @@ Get-Content .\powershell\profile.ps1 | Out-File $profile
 
 ## Visual Studio Code Settings
 
-Open an admin powershell prompt in the root of this repository and run the following command:
-
-```powershell
-New-Item -ItemType SymbolicLink -Path "$home\AppData\Roaming\Code\User\settings.json" -Target "$pwd\vscode\settings.json"
-```
+Sign into VS Code to sync settings.
