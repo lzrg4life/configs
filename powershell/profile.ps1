@@ -1,3 +1,6 @@
+# Updating:
+# Get-Content .\powershell\profile.ps1 | Out-File $profile
+
 # Turn off the error sound
 Set-PSReadLineOption -BellStyle None
 
@@ -10,20 +13,17 @@ function prompt {
 	$principal = [Security.Principal.WindowsPrincipal] $identity
 	$adminRole = [Security.Principal.WindowsBuiltInRole]::Administrator
 
-	$(if ($$) { "`r`n" } else { '' } ) +
-	'PS ' + $(Get-Location) + "`r`n" +
-	$(if (Test-Path variable:/PSDebugContext) { '[DBG]: ' } else { '' }) +
-	$(if ($principal.IsInRole($adminRole)) { '[ADMIN]: ' } else { '' }) +
-	$(if ($NestedPromptLevel -ge 1) { '[NESTED] ' }) + '$ '
+	Write-Host ("`r`nPS " + $(Get-Location) + "`r`n") -NoNewline -ForegroundColor Green
+	
+	if ($principal.IsInRole($adminRole)) { 
+		Write-Host '[ADMIN] ' -NoNewline -ForegroundColor Blue
+	}
+
+	return "> "
 }
 
-New-Alias -name "v" "nvim.exe"
-New-Alias -name "vg" "nvim-qt.exe"
 New-Alias -name "npp" "C:\Program Files\Notepad++\Notepad++.exe"
 New-Alias -name "touch" "New-Item"
-
-$nvprofiledir = "$home\AppData\Local\nvim"
-$nvprofile = "$nvprofiledir\init.vim"
 
 function newsh {
 	Start-Process pwsh
