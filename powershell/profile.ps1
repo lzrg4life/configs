@@ -6,7 +6,15 @@ Set-PSReadlineOption -EditMode Emacs
 
 # Set a custom prompt
 function prompt {
-  Write-Output "`r`n$(Get-Location)`r`n$ "
+	$identity = [Security.Principal.WindowsIdentity]::GetCurrent()
+	$principal = [Security.Principal.WindowsPrincipal] $identity
+	$adminRole = [Security.Principal.WindowsBuiltInRole]::Administrator
+
+	$(if ($$) { "`r`n" } else { '' } ) +
+	'PS ' + $(Get-Location) + "`r`n" +
+	$(if (Test-Path variable:/PSDebugContext) { '[DBG]: ' } else { '' }) +
+	$(if ($principal.IsInRole($adminRole)) { '[ADMIN]: ' } else { '' }) +
+	$(if ($NestedPromptLevel -ge 1) { '[NESTED] ' }) + '$ '
 }
 
 New-Alias -name "v" "nvim.exe"
