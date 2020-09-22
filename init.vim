@@ -12,6 +12,7 @@ let mapleader = " "
 " Easier copy/paste from system clipboard
 nmap <Leader>p "+p
 vmap <Leader>y "+y
+nmap <Leader>Y :%+y<CR>
 
 nmap <S-l> $
 nmap <S-h> 0
