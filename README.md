@@ -24,6 +24,12 @@ Note that the powershell profile expects the executable to end up at "C:\Program
 
 Follow the instructions at [code.visualstudio.com](https://code.visualstudio.com/)
 
+### Installing Neovim
+
+Install the Nightly from [the github releases page](https://github.com/neovim/neovim/releases)
+
+Nightly is needed for the vscode extension to work
+
 ## Powershell Profile
 
 Note: You cannot symlink to the file due to stupid Powershell permissions about running scripts from other computers
