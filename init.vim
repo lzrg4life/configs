@@ -13,6 +13,8 @@ let mapleader = " "
 nmap <Leader>p "+p
 vmap <Leader>y "+y
 
+nmap <S-l> $
+nmap <S-h> 0
 nmap <Right> $
 nmap <Left> 0
 nmap <Leader>c zC
