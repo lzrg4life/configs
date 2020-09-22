@@ -42,6 +42,16 @@ Open a powershell prompt in the root of this repository and run the following co
 Get-Content .\powershell\profile.ps1 | Out-File $profile
 ```
 
+## Neovim Settings
+
+Open an admin powershell prompt in the root of this repository and run the following command:
+
+```powershell
+New-Item -ItemType SymbolicLink -Path "$home\AppData\Local\nvim\init.vim" -Target "$pwd\neovim\init.vim"
+```
+
+For vscode, copy init.vim to ```C:\tools\configs\init.vim```
+
 ## Visual Studio Code Settings
 
 Sign into VS Code to sync settings.
