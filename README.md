@@ -47,10 +47,14 @@ Get-Content .\powershell\profile.ps1 | Out-File $profile
 Open an admin powershell prompt in the root of this repository and run the following command:
 
 ```powershell
-New-Item -ItemType SymbolicLink -Path "$home\AppData\Local\nvim\init.vim" -Target "$pwd\neovim\init.vim"
+New-Item -ItemType SymbolicLink -Path "$home\AppData\Local\nvim\init.vim" -Target "$pwd\init.vim"
 ```
 
 For vscode, copy init.vim to ```C:\tools\configs\init.vim```
+
+```pwsh
+New-Item -ItemType SymbolicLink -Path "C:\tools\configs\init.vim" -Target "$pwd\init.vim"
+```
 
 ## Visual Studio Code Settings
 
