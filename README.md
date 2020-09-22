@@ -39,7 +39,7 @@ Open a powershell prompt in the root of this repository and run the following co
 ```powershell
 # Make sure the path to $profile exists
 # Copy the contents of profile.ps1 to your profile
-Get-Content .\powershell\profile.ps1 | Out-File $profile
+Get-Content .\profile.ps1 | Out-File $profile
 ```
 
 ## Neovim Settings
