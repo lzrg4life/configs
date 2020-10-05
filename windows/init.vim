@@ -30,3 +30,4 @@ nmap <Leader>vista :Vista coc
 " Splits
 nmap <Leader>h <C-w>h
 nmap <Leader>l <C-w>l
+
