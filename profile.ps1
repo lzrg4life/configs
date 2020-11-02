@@ -1,5 +1,5 @@
 # Updating:
-# Get-Content .\powershell\profile.ps1 | Out-File $profile
+# Get-Content .\profile.ps1 | Out-File $profile
 
 # Turn off the error sound
 Set-PSReadLineOption -BellStyle None
