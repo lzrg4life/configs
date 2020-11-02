@@ -27,6 +27,16 @@ alias vinit='nvim ~/.config/nvim/init.vim'
 alias ls='exa -lH --group-directories-first'
 ```
 
+## Windows Neovim
+
+Prerequisite:
+- Have the powershell profile set up first
+
+Link the config
+```pwsh
+symlink $vprofile init.windows.vim
+```
+
 ## IdeaVIM
 
 symlink the .ideavimrc file to ~/.ideavimrc
