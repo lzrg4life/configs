@@ -1,6 +1,8 @@
-# Configs for Linux
+# VIM configs
 
-## Prerequisites
+## Linux
+
+### Prerequisites
 
 0. Install git.
 1. Install neovim.
@@ -8,7 +10,7 @@
 3. Clone this configs repo.
 4. Install exa.
 
-## Setup
+### Setup
 
 Link neovim config
 ```sh
