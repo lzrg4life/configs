@@ -26,3 +26,7 @@ alias v='nvim'
 alias vinit='nvim ~/.config/nvim/init.vim'
 alias ls='exa -lH --group-directories-first'
 ```
+
+## IdeaVIM
+
+symlink the .ideavimrc file to ~/.ideavimrc
