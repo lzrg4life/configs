@@ -5,8 +5,8 @@ nmap <Leader>p "+p
 vmap <Leader>y "+y
 nmap <Leader>Y :%+y<CR>
 
-nmap <Leader>o o<ESC>
-nmap <Leader>O O<ESC>
+nmap <Leader>o ok<ESC>
+nmap <Leader>O Oj<ESC>
 
 imap jj <ESC>
 
