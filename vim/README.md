@@ -31,12 +31,18 @@ alias ls='exa -lH --group-directories-first'
 
 Prerequisite:
 - Have the powershell profile set up first
+- Open powershell in the configs\vim directory
 
-Link the config
 ```pwsh
-symlink $vprofile init.windows.vim
+Add-Content $vprofile ("let &runtimepath.='," + $pwd + "'")
+Add-Content $vprofile ("source " + $pwd + "\init.windows.vim")
 ```
 
-## IdeaVIM
+## Windows IdeaVIM
 
-symlink the .ideavimrc file to ~/.ideavimrc
+Prerequisites:
+- Open powershell in the configs\vim directory
+
+```pwsh
+Add-Content $HOME\.ideavimrc ("source " + $pwd + "\common.vim")
+```
