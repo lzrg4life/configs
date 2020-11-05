@@ -1,61 +1,52 @@
-# configs
+# Configs
 
-Various configuration files and notes
+Various configuration files and notes.
 
-## Installing Dependencies
+This is all based on a Windows setup.
 
-### Installing Powershell Core
+## Install stuff
 
-1. Locate the version you want from [github](https://github.com/PowerShell/PowerShell/releases) and download it.
-2. Install it following whatever steps are appropriate.
+1. [Git-scm](https://www.git-scm.com/)
+2. [Powershell Core](https://github.com/PowerShell/PowerShell/releases)
+3. [.NET SDK](https://dotnet.microsoft.com/download)
+4. [64bit Notepad++](https://notepad-plus-plus.org/downloads/)
+5. [JetBrains Toolbox](https://www.jetbrains.com/toolbox-app/) and sign into the toolbox
+6. Rider (from the JetBrains Toolbox) and install the IdeaVim plugin
 
-### Installing DotNet
+## Setup Git
 
-Install the .NET Core SDK from [Microsoft](https://dotnet.microsoft.com/download)
-
-### Installing Notepad++
-
-1. Download the 64bit msi installer from [the website](https://notepad-plus-plus.org/downloads/)
-2. Install it following whatever steps are appropriate
-
-Note that the powershell profile expects the executable to end up at "C:\Program Files\Notepad++\Notepad++.exe"
-
-### Installing Visual Studio Code
-
-Follow the instructions at [code.visualstudio.com](https://code.visualstudio.com/)
-
-### Installing Neovim
-
-Install the Nightly from [the github releases page](https://github.com/neovim/neovim/releases)
-
-Nightly is needed for the vscode extension to work
-
-## Powershell Profile
-
-Note: You cannot symlink to the file due to stupid Powershell permissions about running scripts from other computers
-
-Open a powershell prompt in the root of this repository and run the following command:
-
-```powershell
-# Make sure the path to $profile exists
-# Copy the contents of profile.ps1 to your profile
-Get-Content .\profile.ps1 | Out-File $profile
+```ps1
+git config --global user.name "Willis Stearns"
+git config --global user.email "email"
 ```
 
-## Neovim Settings
+## Clone this repo
 
-Open an admin powershell prompt in the root of this repository and run the following command:
-
-```powershell
-New-Item -ItemType SymbolicLink -Path "$home\AppData\Local\nvim\init.vim" -Target "$pwd\init.vim"
+```ps1
+cd $HOME
+git clone https://github.com/lzrg4life/configs.git
 ```
 
-For vscode, copy init.vim to ```C:\tools\configs\init.vim```
+## Setup PowerShell
 
-```pwsh
-New-Item -ItemType SymbolicLink -Path "C:\tools\configs\init.vim" -Target "$pwd\init.vim"
+First, set RemoteSigned *via an Admin Powershell prompt*
+
+```ps1
+Set-ExecutionPolicy RemoteSigned
 ```
 
-## Visual Studio Code Settings
+You cannot symlink to the file due to Powershell permissions about running 
+unsigned scripts from other computers.
 
-Sign into VS Code to sync settings.
+To get around that limitation, create the profile as follows:
+
+```ps1
+New-Item -f $profile && 
+  Add-Content $profile ("Get-Content -path $HOME\repos\configs\profile.ps1 -Raw | Invoke-Expression")
+```
+
+## Setup IdeaVIM
+
+```ps1
+symlink $HOME\.ideavimrc $HOME\repos\configs\.ideavimrc
+```

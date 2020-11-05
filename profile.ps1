@@ -1,6 +1,3 @@
-# Updating:
-# Get-Content .\profile.ps1 | Out-File $profile
-
 # Turn off the error sound
 Set-PSReadLineOption -BellStyle None
 
@@ -24,9 +21,6 @@ function prompt {
 
 New-Alias -name "npp" "C:\Program Files\Notepad++\Notepad++.exe"
 New-Alias -name "touch" "New-Item"
-New-Alias -name "v" "C:\tools\Neovim\bin\nvim.exe"
-$vprofile = "$home\AppData\Local\nvim\init.vim"
-$vprofiledir = "$home\AppData\Local\nvim"
 
 function newsh {
 	Start-Process pwsh
