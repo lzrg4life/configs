@@ -6,12 +6,12 @@ This is all based on a Windows setup.
 
 ## Install stuff
 
-1. [Git-scm](https://www.git-scm.com/)
-2. [Powershell Core](https://github.com/PowerShell/PowerShell/releases)
-3. [.NET SDK](https://dotnet.microsoft.com/download)
-4. [64bit Notepad++](https://notepad-plus-plus.org/downloads/)
-5. [JetBrains Toolbox](https://www.jetbrains.com/toolbox-app/) and sign into the toolbox
-6. Rider (from the JetBrains Toolbox) and install the IdeaVim plugin
+* [Git-scm](https://www.git-scm.com/)
+* [Powershell Core](https://github.com/PowerShell/PowerShell/releases)
+* [.NET SDK](https://dotnet.microsoft.com/download)
+* [64bit Notepad++](https://notepad-plus-plus.org/downloads/)
+* [NodeJS](https://nodejs.org/en/)
+* [Visual Studio Code](https://code.visualstudio.com/)
 
 ## Setup Git
 
@@ -45,8 +45,13 @@ New-Item -f $profile &&
   Add-Content $profile ("Get-Content -path $HOME\repos\configs\profile.ps1 -Raw | Invoke-Expression")
 ```
 
-## Setup IdeaVIM
+## Setup VS Code
 
-```ps1
-symlink $HOME\.ideavimrc $HOME\repos\configs\.ideavimrc
-```
+Install extensions for:
+
+* JavaScript
+* TypeScript
+* Prettier
+* PowerShell
+
+Set the default integrated terminal to PowerShell Core
