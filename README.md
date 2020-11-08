@@ -9,6 +9,7 @@ This is all based on a Windows setup.
 * [Git-scm](https://www.git-scm.com/)
 * [Powershell Core](https://github.com/PowerShell/PowerShell/releases)
 * [.NET SDK](https://dotnet.microsoft.com/download)
+* [Amazon JDK - 8, 11, 15](https://aws.amazon.com/corretto/)
 * [64bit Notepad++](https://notepad-plus-plus.org/downloads/)
 * [NodeJS](https://nodejs.org/en/)
 * [Visual Studio Code](https://code.visualstudio.com/)
