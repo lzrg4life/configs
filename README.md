@@ -23,7 +23,8 @@ git config --global user.email "email"
 ## Clone this repo
 
 ```ps1
-cd $HOME
+New-Item -f $HOME\repos
+cd $HOME\repos
 git clone https://github.com/lzrg4life/configs.git
 ```
 
