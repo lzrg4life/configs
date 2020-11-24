@@ -44,6 +44,11 @@ function symlink($link, $target) {
 		return
 	}
     $cmd = "New-Item -ItemType SymbolicLink -Path '$link' -Target '$target'"
-    echo $cmd
+    Write-Output $cmd
     Start-Process pwsh -Verb runAs -ArgumentList "-Command $cmd"
+}
+
+function UpdateProfile {
+	New-Item -f $profile 
+	Get-Content -path $HOME\repos\github\configs\windows\profile.ps1 -Raw | Set-Content $profile		
 }

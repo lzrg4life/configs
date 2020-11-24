@@ -2,17 +2,14 @@
 
 Various configuration files and notes.
 
-This is all based on a Windows setup.
+## Stuff to install
 
-## Install stuff
-
-* [Git-scm](https://www.git-scm.com/)
-* [Powershell Core](https://github.com/PowerShell/PowerShell/releases)
-* [.NET SDK](https://dotnet.microsoft.com/download)
-* [Amazon JDK - 8, 11, 15](https://aws.amazon.com/corretto/)
-* [64bit Notepad++](https://notepad-plus-plus.org/downloads/)
-* [NodeJS](https://nodejs.org/en/)
-* [Visual Studio Code](https://code.visualstudio.com/)
+* git
+* dotnet sdk
+* nvm / node
+* visual studio code
+* powershell core
+* notepad++ (windows)
 
 ## Setup Git
 
@@ -21,11 +18,17 @@ git config --global user.name "Willis Stearns"
 git config --global user.email "email"
 ```
 
+## Prep file system
+
+```ps1
+New-Item -f $HOME\repos\github
+New-Item -f $HOME\repos\bitbucket
+```
+
 ## Clone this repo
 
 ```ps1
-New-Item -f $HOME\repos
-cd $HOME\repos
+cd $HOME\repo\github
 git clone https://github.com/lzrg4life/configs.git
 ```
 
@@ -37,23 +40,17 @@ First, set RemoteSigned *via an Admin Powershell prompt*
 Set-ExecutionPolicy RemoteSigned
 ```
 
-You cannot symlink to the file due to Powershell permissions about running 
-unsigned scripts from other computers.
+You cannot symlink to the file due to Powershell permissions about running unsigned scripts from other computers.
 
 To get around that limitation, create the profile as follows:
 
 ```ps1
-New-Item -f $profile && 
-  Add-Content $profile ("Get-Content -path $HOME\repos\configs\profile.ps1 -Raw | Invoke-Expression")
+New-Item -f $profile 
+Get-Content -path $HOME\repos\github\configs\windows\profile.ps1 -Raw | Add-Content $profile
 ```
 
+After the profile is in place you can run the "UpdateProfile" in powershell function get get new versions.
+
 ## Setup VS Code
-
-Install extensions for:
-
-* JavaScript
-* TypeScript
-* Prettier
-* PowerShell
 
 Set the default integrated terminal to PowerShell Core
