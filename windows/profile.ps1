@@ -19,6 +19,7 @@ function prompt {
 	return "> "
 }
 
+New-alias -name "v" "nvim"
 New-Alias -name "npp" "C:\Program Files\Notepad++\Notepad++.exe"
 New-Alias -name "touch" "New-Item"
 New-Alias -name "exp" "explorer"
