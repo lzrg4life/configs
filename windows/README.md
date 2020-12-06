@@ -11,8 +11,9 @@ iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
 
 symlink vim stuff (run from this folder)
 ```pwsh
-symlink C:\Users\Willis\AppData\Local\NVIm\init.vim $PWD\init.vim
-symlink C:\Users\Willis\AppData\Local\NVIm\coc.vim $PWD\coc.vim
+symlink $HOME\AppData\Roaming\Code\User\settings.json $PWD\vscode-settings.json
+symlink $HOME\AppData\Local\NVIm\init.vim $PWD\init.vim
+symlink $HOME\AppData\Local\NVIm\coc.vim $PWD\coc.vim
 ```
 
 open neovim and ```:PlugInstall``` and close it

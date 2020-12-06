@@ -1,0 +1,22 @@
+{
+    "workbench.startupEditor": "newUntitledFile",
+    "terminal.integrated.shell.windows": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
+    "explorer.confirmDelete": false,
+    "go.useLanguageServer": true,
+    "editor.minimap.enabled": false,
+    "vim.leader": "<space>",
+    "vim.insertModeKeyBindings": [ 
+        {"before": ["j", "j"], "after": ["<Esc>"]}
+    ],
+    "vim.normalModeKeyBindings": [
+        {"before": ["J"], "after": ["}"]},
+        {"before": ["K"], "after": ["{"]},
+        {"before": ["H"], "after": ["0"]},
+        {"before": ["L"], "after": ["$"]},
+        {"before": ["<leader>", "p"], "after": ["\"", "+", "p"]},
+        {"before": ["<leader>", "Y"], "after": [":", "%", "y", "+", "<CR>"]}
+    ],
+    "vim.visualModeKeyBindings": [
+        {"before": ["<leader>", "y"], "after": ["\"", "+", "y"]}
+    ]
+}
