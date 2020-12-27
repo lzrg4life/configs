@@ -52,3 +52,13 @@ function UpdateProfile {
 	New-Item -f $profile 
 	Get-Content -path $HOME\repos\github\configs\windows\profile.ps1 -Raw | Set-Content $profile		
 }
+
+function which([array]$values) {
+	if ($values.Length -eq 0) {
+		Write-Output "Missing values. Use like 'which cmd1, cmd2'"
+		return
+	}
+	foreach ($value in $values) {
+		(get-command $value).Path
+	}
+}
