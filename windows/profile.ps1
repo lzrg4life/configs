@@ -62,3 +62,9 @@ function which([array]$values) {
 		(get-command $value).Path
 	}
 }
+
+# Per chocolatey installation
+$ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
+if (Test-Path($ChocolateyProfile)) {
+  Import-Module "$ChocolateyProfile"
+}
