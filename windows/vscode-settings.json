@@ -14,9 +14,30 @@
         {"before": ["H"], "after": ["0"]},
         {"before": ["L"], "after": ["$"]},
         {"before": ["<leader>", "p"], "after": ["\"", "+", "p"]},
-        {"before": ["<leader>", "Y"], "after": [":", "%", "y", "+", "<CR>"]}
+        {"before": ["<leader>", "Y"], "after": [":", "%", "y", "+", "<CR>"]},
+        {"before": ["<leader>", "h"], "commands": ["editor.action.showHover"]}
     ],
     "vim.visualModeKeyBindings": [
         {"before": ["<leader>", "y"], "after": ["\"", "+", "y"]}
-    ]
+    ],
+    "vim.handleKeys": {
+        "<C-c>": false,
+        "<C-v>": false,
+        "<C-a>": false
+    },
+    "[dart]": {
+        "editor.formatOnSave": true,
+        "editor.formatOnType": true,
+        "editor.rulers": [
+            80
+        ],
+        "editor.selectionHighlight": false,
+        "editor.suggest.snippetsPreventQuickSuggestions": false,
+        "editor.suggestSelection": "first",
+        "editor.tabCompletion": "onlySnippets",
+        "editor.wordBasedSuggestions": false
+    },
+    "workbench.colorTheme": "Default Dark+",
+    "workbench.iconTheme": "material-icon-theme",
+    "liveServer.settings.donotVerifyTags": true
 }
