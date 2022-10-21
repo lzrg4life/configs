@@ -1,0 +1,26 @@
+set vsvim_useeditordefaults
+set number relativenumber
+
+noremap <s-j> 5j
+noremap <s-k> 5k
+noremap y "+y
+noremap <s-Y> V"+y
+noremap p "+p
+noremap <s-p> "+<s-P>
+vnoremap <tab> >gv
+vnoremap <s-tab> <gv
+
+noremap <c-n> :vsc Project.AddNewItem<CR>
+noremap ed :vsc Edit.ExpandCurrentRegion<CR>0
+noremap gd :vsc Edit.GoToDefinition<CR>
+noremap gb :vsc View.NavigateBackward<CR>
+noremap gf :vsc View.NavigateForward<CR>
+noremap qi :vsc Edit.QuickInfo<CR>
+
+noremap <leader> " "
+noremap <leader>tn :vsc Window.NextTab<CR>
+noremap <leader>tp :vsc Window.PreviousTab<CR>
+noremap <leader>sn :vsc Window.NextSplitPane<CR>
+noremap <leader>sp :vsc Window.PreviousSplitPane<CR>
+noremap <leader><space> :vsc Edit.NavigateTo<CR>
+noremap <leader>sc :source C:\Users\wstearns\_vsvimrc<CR>
