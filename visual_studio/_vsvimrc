@@ -1,26 +1,54 @@
 set vsvim_useeditordefaults
 set number relativenumber
+set autoindent
 
+" easier moving up and down for my brain
 noremap <s-j> 5j
 noremap <s-k> 5k
+
+" make copy and paste easier for my brain
 noremap y "+y
 noremap <s-Y> V"+y
 noremap p "+p
 noremap <s-p> "+<s-P>
+
+" Move lines up/down
+nnoremap <A-j> :m .+1<CR>==
+nnoremap <A-k> :m .-2<CR>==
+inoremap <A-j> <Esc>:m .+1<CR>==gi
+inoremap <A-k> <Esc>:m .-2<CR>==gi
+vnoremap <A-j> :m '>+1<CR>gv=gv
+vnoremap <A-k> :m '<-2<CR>gv=gv
+
+" Indenting
+noremap <tab> V>
+noremap <s-tab> V<
 vnoremap <tab> >gv
 vnoremap <s-tab> <gv
 
+" Ctrl maps
 noremap <c-n> :vsc Project.AddNewItem<CR>
-noremap ed :vsc Edit.ExpandCurrentRegion<CR>0
-noremap gd :vsc Edit.GoToDefinition<CR>
-noremap gb :vsc View.NavigateBackward<CR>
-noremap gf :vsc View.NavigateForward<CR>
-noremap qi :vsc Edit.QuickInfo<CR>
 
+" leader maps
 noremap <leader> " "
+noremap <leader><space> :vsc Edit.QuickInfo<CR>
+noremap <leader>e :vsc Edit.ExpandCurrentRegion<CR>0
+noremap <leader>c :vsc Edit.CollapseCurrentRegion<CR>0
+noremap <leader>gb :vsc View.NavigateBackward<CR>
+noremap <leader>gd :vsc Edit.GoToDefinition<CR>
+noremap <leader>gf :vsc View.NavigateForward<CR>
+noremap <leader>i dd<s-o>
+noremap <leader>j <s-J>
+noremap <leader>ko :vsc Edit.CollapseToDefinitions<cr>
+noremap <leader>kog :vsc Edit.CollapseToDefinitions<cr>gg
+noremap <leader>o o<esc>
+noremap <leader>p :vsc Edit.NavigateTo<CR>
+noremap <leader><s-o> <s-o><esc>
+noremap <leader>rl :source C:\Users\wstearns\_vsvimrc<CR>
 noremap <leader>tn :vsc Window.NextTab<CR>
 noremap <leader>tp :vsc Window.PreviousTab<CR>
 noremap <leader>sn :vsc Window.NextSplitPane<CR>
 noremap <leader>sp :vsc Window.PreviousSplitPane<CR>
-noremap <leader><space> :vsc Edit.NavigateTo<CR>
-noremap <leader>sc :source C:\Users\wstearns\_vsvimrc<CR>
+
+" Find Visual Studio commands at:
+" https://learn.microsoft.com/en-us/visualstudio/ide/default-keyboard-shortcuts-in-visual-studio?view=vs-2022
